@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8; /* Light background for a clean look */
+    color: #333; /* Dark text for good contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    text-align: center;
+    padding: 2rem;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: #fff; /* White background for the content */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 3rem;
+    max-width: 800px;
+    width: 100%; /* Ensures it resizes on smaller screens */
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.05); /* Subtle zoom-in effect when hovering the container */
+}
+
+h1, h2 {
+    margin-bottom: 1rem;
+    font-size: 2.5rem; /* Large heading size for emphasis */
+    color: #333;
+    transition: color 0.3s ease-in-out;
+}
+
+h1 span {
+    color: #007bff; /* Blue color for emphasis */
+}
+
+h1:hover, h2:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+.intro p {
+    font-size: 1.1rem; /* Readable font size */
+    line-height: 1.8; /* Slightly larger line spacing */
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+    color: #555; /* Slightly lighter text for the paragraph */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.intro p:hover {
+    opacity: 1; /* Full opacity on hover */
+}
+
+.image-container {
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-container:hover {
+    transform: scale(1.1); /* Zoom in effect on image container hover */
+}
+
+img {
+    width: 200px; /* Smaller image size */
+    height: 200px; /* Keeping the aspect ratio of the image */
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+img:hover {
+    transform: rotate(15deg); /* Slight rotation on hover */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    h1, h2 {
+        font-size: 2rem; /* Adjust heading size for smaller screens */
+    }
+
+    .intro p {
+        font-size: 1rem; /* Adjust paragraph text size */
+    }
+
+    img {
+        width: 150px; /* Adjust image size for mobile */
+        height: 150px; /* Maintain aspect ratio */
+    }
+}

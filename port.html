@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salil Shekhar's Portfolio</title>
+    <link rel="stylesheet" href="por.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Salil Shekhar</h1>
+        <h2>Certificate Portfolio</h2>
+
+        <div class="intro">
+            <p>Here are the certificates I have earned from various platforms, including HackerRank, eLab, and more.</p>
+        </div>
+
+        <!-- Certificates Section -->
+        <div class="certificates">
+            <div class="certificate" onclick="showModal('hackerrank_certificate')">
+                <h3>HackerRank Certificate</h3>
+                <div class="image-container">
+                    <img src="hackerrank.png" alt="HackerRank Certificate" id="hackerrank_certificate">
+                </div>
+            </div>
+
+            <div class="certificate" onclick="showModal('elab_certificate')">
+                <h3>eLab Certificate</h3>
+                <div class="image-container">
+                    <img src="elab.png" alt="eLab Certificate" id="elab_certificate">
+                </div>
+            </div>
+
+            <div class="certificate" onclick="showModal('completion_status_certificate')">
+                <h3>Completion Status Certificate</h3>
+                <div class="image-container">
+                    <img src="dsa.jpg" alt="Completion Status Certificate" id="completion_status_certificate">
+                </div>
+            </div>
+
+            <div class="certificate">
+                <h3>Add-on Course Certificate</h3>
+                <div class="image-container">
+                    <a href="bot23.pdf" target="_blank">
+                        <p>Click here to view the PDF</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="certificate" onclick="showModal('coding_contest_certificate')">
+                <h3>Coding Contest Certificate</h3>
+                <div class="image-container">
+                    <img src="test.png" alt="Coding Contest Certificate" id="coding_contest_certificate">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+        function showModal(imageId) {
+            var modal = document.getElementById("modal");
+            var modalImage = document.getElementById("modalImage");
+            var image = document.getElementById(imageId);
+            modal.style.display = "block";
+            modalImage.src = image.src;
+        }
+
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+        }
+    </script>
+</body>
+</html>
